@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.css";
+import { Banner } from "./Banner";
 import { requests } from "./request";
 import { Row } from "./Row";
 
 function App() {
   return (
     <div className="App">
+      <Banner />
       <Row
         title="NETFLIX ORIGINAL"
         fetchUrl={requests.feachNetflixOriginals}
@@ -16,7 +18,7 @@ function App() {
       <Row title="Comedy Movies" fetchUrl={requests.feactComedyMovies} />
       <Row title="Horror Movies" fetchUrl={requests.feactHorrorMovies} />
       <Row title="Romance Movies" fetchUrl={requests.feactRomanceMovies} />
-      <Row title="DOcumentaries" fetchUrl={requests.feactDocumentMovies} />
+      <Row title="Documentaries" fetchUrl={requests.feactDocumentMovies} />
     </div>
   );
 }
